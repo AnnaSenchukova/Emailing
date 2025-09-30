@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="{{.locale}}" dir="{{.reverseTemplate}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <title>ДОБАВЬ СЮДА НАЗВАНИЕ</title>
+    <!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" /><!--<![endif]-->
+    <!-- IMPORTANT: CSS is fully scoped -->
+    <style>
+      .fmk-email { background:#ECEDEE; Margin:0; padding:20px 0; }
+      .fmk-wrapper { padding:20px 0; }
+      .fmk-email table { border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+      .fmk-email img { -ms-interpolation-mode:bicubic; display:block; border:0; outline:none; text-decoration:none; height:auto; }
+      .fmk-email a { text-decoration:none; }
+      .fmk-email h1,.fmk-email h2,.fmk-email h3,.fmk-email h4 { font-family: Verdana, Geneva, sans-serif; color:#1F252E; margin:0; }
+      .fmk-email h1 { font-weight:700; font-size:26px; line-height:30px; }
+      .fmk-email h2 { font-weight:700; font-size:22px; line-height:28px; }
+      .fmk-email h3 { font-weight:700; font-size:18px; line-height:24px; }
+      .fmk-email h4 { font-weight:700; font-size:20px; line-height:24px; }
+      .fmk-email p,.fmk-email a,.fmk-email li,.fmk-email td { font-family:'Roboto', Arial, Helvetica, sans-serif; color:#1F252E; font-size:16px; line-height:22px; }
+      .fmk-email .fmk-muted { color:#333333; }
+
+      /* Buttons */
+      .fmk-btn { background:#0085FF; color:#FFFFFF !important; font:700 16px/20px 'Roboto', Arial, sans-serif; padding:12px 18px; border-radius:12px; display:block; width:100% !important; text-align:center; box-sizing:border-box; text-decoration:none !important; }
+
+      /* Pills */
+      .fmk-pill { background:#E7F3FE; border-radius:24px; padding:8px 14px; display:inline-block; }
+      .fmk-pill--yellow { background:#FFD93B; border-radius:24px; padding:8px 14px; display:inline-block; }
+
+      /* MOBILE (<=600px) rules */
+      @media screen and (max-width:600px){
+        .mw-375{ width:375px !important; max-width:375px !important; }             /* mobile width */
+        .no-radius{ border-radius:0 !important; }                                  /* remove rounding */
+        .inner-pad{ padding-left:34px !important; padding-right:34px !important; } /* inner paddings */
+        .inner-484{ width:307px !important; max-width:307px !important; }          /* content width shrink */
+        .fmk-email{ padding-top:0 !important; padding-bottom:0 !important; }       /* remove outer spacing */
+        .fmk-wrapper{ padding-top:0 !important; padding-bottom:0 !important; }     /* remove wrapper spacing */
+        .stack-when-mobile td{ display:block !important; width:100% !important; }  /* stack columns */
+        .stack-when-mobile .img-center{ text-align:center !important; }
+        .stack-when-mobile .img-center img{ margin:0 auto !important; }
+      }
+    </style>
+  </head>
+  <body class="fmk-email" style="Margin:0; padding:20px 0; width:100% !important; background:#ECEDEE;">
+
+    <!-- PREHEADER (hidden, with long figure-space tail) -->
+    <!-- NOTE: keep the spaces to hide extra preview text -->
+    <div style="display:none; font-size:0; line-height:0; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;">
+      Прехедер для письма (замени текст)&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;
+    </div>
+
+    <!-- OUTER WRAPPER -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="fmk-wrapper" style="background:#ECEDEE; padding:20px 0;">
+      <tr>
+        <td align="center" style="background:#ECEDEE;">
+
+          <!-- HERO (desktop 604; mobile 375 no radius) -->
+          <table role="presentation" width="604" cellpadding="0" cellspacing="0" class="mw-375 no-radius" style="width:604px; max-width:604px; background:#FFFFFF; Margin:0 auto; border-radius:24px 24px 0 0; overflow:hidden;">
+            <tr>
+              <td style="background:#FFFFFF;">
+                <img src="{{.heroImage}}" alt="Hero image" width="604" style="display:block; width:100%; max-width:604px; height:auto; border:0;" />
+              </td>
+            </tr>
+          </table>
+
+          <!-- WHITE BLOCK (base content container) -->
+          <table role="presentation" width="604" cellpadding="0" cellspacing="0" class="mw-375" style="width:604px; max-width:604px; background:#FFFFFF; Margin:0 auto;">
+            <tr>
+              <td style="background:#FFFFFF;">
+                <!-- inner container 484 (desktop) / 307 (mobile) -->
+                <table role="presentation" width="484" align="center" cellpadding="0" cellspacing="0" class="inner-484" style="width:484px; max-width:484px; Margin:0 auto; background:#FFFFFF;">
+
+                  <!-- TITLE -->
+                  <tr>
+                    <td class="inner-pad" style="padding:32px 0 12px 0;">
+                      <h1>Заголовок письма</h1>
+                    </td>
+                  </tr>
+
+                  <!-- INTRO PARAGRAPH -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 16px 0;">
+                      <p>Короткое вступление — 2–3 строки с ключевой мыслью письма.</p>
+                    </td>
+                  </tr>
+
+                  <!-- CTA (full-width) -->
+                  <tr>
+                    <td align="center" class="inner-pad" style="padding:8px 0 28px 0;">
+                      <!--[if mso]>
+                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.ctaUrl}}" style="height:44px;v-text-anchor:middle;width:100%;" arcsize="15%" stroke="f" fillcolor="#0085FF">
+                          <w:anchorlock/>
+                          <center style="color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700; text-decoration:none;">Кнопка действия</center>
+                        </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!--><a href="{{.ctaUrl}}" target="_blank" class="fmk-btn">Кнопка действия</a><!--<![endif]-->
+                    </td>
+                  </tr>
+
+                  <!-- PILLS (examples) -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <div class="fmk-pill">Синяя пилюля</div>
+                      <div class="fmk-pill--yellow" style="margin-left:8px;">Жёлтая пилюля</div>
+                    </td>
+                  </tr>
+
+                  <!-- DIVIDER -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 24px 0;">
+                      <!-- simple divider -->
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr><td style="height:1px; line-height:1px; background:#ECEDEE;">&nbsp;</td></tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- ===================================== -->
+                  <!-- LIBRARY OF READY BLOCKS (copy/paste)  -->
+                  <!-- ===================================== -->
+
+                  <!-- BLOCK A: Two columns (Image left, Text right) -->
+                  <!-- usage: keep class "stack-when-mobile" to stack columns on mobile -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="stack-when-mobile">
+                        <tr>
+                          <td class="img-center" valign="top" width="200" style="padding:0 16px 16px 0;">
+                            <img src="{{.blockA_image}}" alt="" width="200" style="width:100%; max-width:200px; height:auto;" />
+                          </td>
+                          <td valign="top" style="padding:0 0 0 0;">
+                            <h2 style="margin-bottom:8px;">Двухколоночный блок</h2>
+                            <p>Текст справа от изображения. 3–5 строк для основного описания, преимуществ или пояснений.</p>
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+                              <tr>
+                                <td width="16" valign="top">•</td>
+                                <td style="padding-left:8px;">Короткий пункт преимущества</td>
+                              </tr>
+                              <tr>
+                                <td width="16" valign="top">•</td>
+                                <td style="padding-left:8px;">Ещё один пункт</td>
+                              </tr>
+                            </table>
+                            <div style="margin-top:14px;">
+                              <a href="{{.blockA_cta}}" class="fmk-btn">Подробнее</a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK B: Image right, Text left -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="stack-when-mobile">
+                        <tr>
+                          <td valign="top" style="padding:0 16px 16px 0;">
+                            <h2 style="margin-bottom:8px;">Картинка справа</h2>
+                            <p>Текст слева, картинка справа. Используйте для чередования визуальных блоков.</p>
+                            <div class="fmk-pill" style="margin-top:8px;">Преимущество</div>
+                            <div style="margin-top:14px;">
+                              <a href="{{.blockB_cta}}" class="fmk-btn">Посмотреть</a>
+                            </div>
+                          </td>
+                          <td class="img-center" valign="top" width="200" style="padding:0 0 16px 16px;">
+                            <img src="{{.blockB_image}}" alt="" width="200" style="width:100%; max-width:200px; height:auto;" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK C: Feature grid (3 cards) -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <h2 style="margin:0 0 12px 0;">Преимущества</h2>
+                      <!-- use a 3-col layout that stacks on mobile -->
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="stack-when-mobile">
+                        <tr>
+                          <td width="33.33%" style="padding:12px 8px; background:#FFFFFF;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F7FAFE; border-radius:16px;">
+                              <tr><td style="padding:16px;"><h3>Пункт 1</h3><p style="margin-top:6px;">Короткое описание выгоды.</p></td></tr>
+                            </table>
+                          </td>
+                          <td width="33.33%" style="padding:12px 8px; background:#FFFFFF;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F7FAFE; border-radius:16px;">
+                              <tr><td style="padding:16px;"><h3>Пункт 2</h3><p style="margin-top:6px;">Короткое описание выгоды.</p></td></tr>
+                            </table>
+                          </td>
+                          <td width="33.33%" style="padding:12px 8px; background:#FFFFFF;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F7FAFE; border-radius:16px;">
+                              <tr><td style="padding:16px;"><h3>Пункт 3</h3><p style="margin-top:6px;">Короткое описание выгоды.</p></td></tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK D: Highlight bar with pill + short text -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFF9E6; border-radius:16px;">
+                        <tr>
+                          <td style="padding:16px;">
+                            <div class="fmk-pill--yellow">Важное</div>
+                            <p style="margin:8px 0 0 0;">Короткий акцентный блок с важной мыслью или оффером.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK E: Testimonial / Quote -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F8FC; border-radius:16px;">
+                        <tr>
+                          <td style="padding:18px 18px 6px 18px;">
+                            <h3 style="margin:0 0 6px 0;">Отзывы</h3>
+                            <p style="margin:0;">“Короткая цитата от пользователя/партнёра про продукт. 1–2 предложения.”</p>
+                            <p class="fmk-muted" style="margin:8px 0 0 0; font-size:14px; line-height:20px;">Имя, должность/город</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK F: Simple FAQ (static) -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 28px 0;">
+                      <h2 style="margin:0 0 8px 0;">FAQ</h2>
+                      <p><strong>Вопрос 1:</strong> Короткий ответ на частый вопрос.</p>
+                      <p><strong>Вопрос 2:</strong> Ещё один ответ (1–2 предложения).</p>
+                    </td>
+                  </tr>
+
+                  <!-- BLOCK G: Product / Offer card -->
+                  <tr>
+                    <td class="inner-pad" style="padding:0 0 36px 0;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF; border:1px solid #ECEDEE; border-radius:16px;">
+                        <tr>
+                          <td class="inner-pad" style="padding:16px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="stack-when-mobile">
+                              <tr>
+                                <td class="img-center" width="160" valign="top" style="padding:0 16px 16px 0;">
+                                  <img src="{{.productImage}}" alt="" width="160" style="width:100%; max-width:160px; height:auto;" />
+                                </td>
+                                <td valign="top" style="padding:0;">
+                                  <h3 style="margin-bottom:6px;">Название предложения</h3>
+                                  <p class="fmk-muted" style="margin:0 0 10px 0;">Короткое описание, 1–3 строки. Можно указать ключевую выгоду или условие.</p>
+                                  <div class="fmk-pill" style="margin-bottom:12px;">Бонус</div>
+                                  <a href="{{.productCta}}" class="fmk-btn">Забрать</a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- END LIBRARY -->
+                </table>
+                <!-- /inner 484 -->
+              </td>
+            </tr>
+          </table>
+          <!-- /WHITE BLOCK -->
+
+          <!-- FOOTER (desktop 604; mobile 375, no radius) -->
+          <table role="presentation" width="604" cellpadding="0" cellspacing="0" class="mw-375 no-radius" style="width:604px; max-width:604px; background:#F5F5F5; Margin:0 auto; border-radius:0 0 24px 24px;">
+            <tr>
+              <td class="no-radius" style="background:#F5F5F5; padding:32px; border-radius:0 0 24px 24px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F5F5;">
+                  <tr>
+                    <td style="background:#F5F5F5;">
+                      <h3 style="color:#333;">Подвал письма</h3>
+                      <p class="fmk-muted" style="margin:8px 0 0 0;">© Где мои дети, {{.year}}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="background:#F5F5F5; padding-top:12px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" style="background:#F5F5F5;">
+                        <tr>
+                          <td style="padding-right:16px;"><a href="{{.termsUrl}}" style="font-size:12px; color:#0085FF;">Условия использования</a></td>
+                          <td style="padding-right:16px;"><a href="{{.faqUrl}}" style="font-size:12px; color:#0085FF;">Частые вопросы</a></td>
+                          <td><a href="{{.unsubscribeUrl}}" style="font-size:12px; color:#0085FF;">Отказаться от рассылки</a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+    <!-- /OUTER WRAPPER -->
+  </body>
+</html>
