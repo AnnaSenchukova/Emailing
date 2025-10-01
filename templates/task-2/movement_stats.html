@@ -28,7 +28,7 @@
 
       /* Pills (if used) */
       .fmk-pill { display:inline-block; background:#E7F3FE; color:#0B61D6; border-radius:999px; padding:6px 10px; font:700 12px/14px Roboto, Arial, sans-serif; }
-      .fmk-pill--yellow { background:#FFD93B; color:#1F2937; }
+      .fmk-pill--yellow { background:#FFD93B; color:#1F2937; border-radius:24px; padding:8px 14px; display:inline-block; font:400 16px/22px Roboto, Arial, sans-serif; }
 
       /* ===== Mobile (≤600px) ===== */
       @media (max-width:600px) {
@@ -189,6 +189,29 @@
                     </td>
                   </tr>
                 </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
+
+                <!-- BLOCK D: Highlight bar with pill + short text -->
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FEF6CD; border-radius:20px;">
+                  <tr>
+                    <td style="padding:24px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="{{.blockB_cta}}" target="_blank" class="fmk-pill--yellow">Важное</a>
+                            <p class="p" style="margin:8px 0 0 0;">Короткий акцентный блок с важной мыслью или оффером.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
 
               </td>
             </tr>
