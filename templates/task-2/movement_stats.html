@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="{{.locale}}" dir="{{.reverse_template}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <title>ДОБАВЬ СЮДА НАЗВАНИЕ</title>
+    <!--[if !mso]><!--><link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" /><!--<![endif]-->
+    <style>
+      /* ===== Base ===== */
+      body.fmk-email { margin:0 !important; padding:0 !important; background:#ECEDEE; }
+      table { border-collapse:separate; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+      img { display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; height:auto; }
+      a { text-decoration:none; color:#0085FF; }
+      .p { font:400 14px/20px Roboto, Arial, sans-serif; color:#394150; margin:0; }
+      .h1 { font:700 24px/32px Roboto, Arial, sans-serif; color:#101214; margin:0; }
+      .h2 { font:700 20px/28px Roboto, Arial, sans-serif; color:#101214; margin:0; }
+      .small { font:400 12px/18px Roboto, Arial, sans-serif; color:#6B7280; }
+
+      /* ===== Layout helpers ===== */
+      .fmk-wrapper { padding:20px 0; background:#ECEDEE; }
+      .mw-375 { width:604px; max-width:604px; }
+      .no-radius { border-radius:0 !important; }
+      .btn a { display:block; text-align:center; background:#0085FF; color:#FFFFFF !important; font:700 14px/18px Roboto, Arial, sans-serif; padding:14px 16px; border-radius:12px; }
+      .inner-pad-604 { padding-left:60px; padding-right:60px; }  /* 604 - 120 = 484 */
+
+      /* Pills (if used) */
+      .fmk-pill { display:inline-block; background:#E7F3FE; color:#0B61D6; border-radius:999px; padding:6px 10px; font:700 12px/14px Roboto, Arial, sans-serif; }
+      .fmk-pill--yellow { background:#FFD93B; color:#1F2937; }
+
+      /* ===== Mobile (≤600px) ===== */
+      @media (max-width:600px) {
+        .fmk-wrapper { padding-top:0 !important; padding-bottom:0 !important; }
+        .mw-375 { width:375px !important; max-width:375px !important; }
+        .no-radius { border-radius:0 !important; }
+        .inner-pad-604 { padding-left:34px !important; padding-right:34px !important; }
+      }
+      /*[if mso]><style>
+        .p,.h1,.h2,.small { font-family: Arial, sans-serif !important; }
+      </style><![endif]*/
+    </style>
+  </head>
+  <body class="fmk-email">
+
+    <!-- Preheader (hidden, keep long figure-space tail) -->
+    <div style="display:none;font-size:1px;line-height:1px;color:#ECEDEE;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
+      {{.preheader}} &#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;
+    </div>
+
+    <!-- OUTER WRAPPER -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="fmk-wrapper">
+      <tr>
+        <td align="center" style="background:#ECEDEE; padding:0;">
+
+          <!-- ===== HERO (604 desktop / 375 mobile) ===== -->
+          <table role="presentation" width="604" cellpadding="0" cellspacing="0"
+                 class="mw-375 "
+                 style="background:#FFFFFF; margin:0 auto; border-radius:20px 20px 0 0;">
+            <tr>
+              <td style="padding:24px 24px 0 24px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr><td align="center" class="p" style="color:#6B7280;">{{.brand_name}}</td></tr>
+                </table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr><td align="center" class="h1" style="padding:8px 0 8px 0;">Ю-хуу, {{.child_name}} — {{.child_status}}!</td></tr>
+                  <tr><td align="center" class="p" style="padding:0 0 16px 0;">Достижения месяца вашего ребёнка</td></tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0;">
+                <img src="{{.hero_image}}" width="604" alt="Hero"
+                     style="width:100%; height:auto; border-radius:0 0 20px 20px;" />
+              </td>
+            </tr>
+          </table>
+          <!-- /HERO -->
+
+          <!-- ===== WHITE BLOCK (604 desktop / 375 mobile) ===== -->
+          <table role="presentation" width="604" cellpadding="0" cellspacing="0" align="center"
+                 class="mw-375"
+                 bgcolor="#FFFFFF"
+                 style="background:#FFFFFF; margin:0 auto; border-radius:20px;">
+            <tr>
+              <td class="inner-pad-604" bgcolor="#FFFFFF" style="background:#FFFFFF; padding-top:24px; padding-bottom:0; border-radius:0 0 0 0;">
+
+                <!-- INTRO -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF; border-radius:20px;">
+                  <tr>
+                    <td style="padding:0;">
+                      <h2 class="h2" style="margin:0 0 8px 0;">Привет!</h2>
+                      <p class="p">Каждый месяц {{.child_name}} радует нас новыми достижениями. Мы собрали для вас самые интересные моменты — давайте посмотрим!</p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
+
+                <!-- WALKING -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#E7F3FE; border-radius:20px;">
+                  <tr>
+                    <td style="padding:24px;">
+                      <img src="{{.walking_image}}" width="436" alt="Следы и кеды" style="width:100%; height:auto; margin:0 0 12px 0; border-radius:12px;" />
+                      <h2 class="h2" style="margin:0 0 8px 0;">Пройденные километры</h2>
+                      <p class="p" style="margin:0 0 16px 0;">
+                        Отлично погуляли — всего {{.total_walking_distance}} км. В шагах это {{.avg_walking_distance_per_day}} в среднем за день.
+                        Самый длинный маршрут — {{.longest_route}} км.
+                      </p>
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="btn">
+                        <tr>
+                          <td align="center">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.cta_walks_url}}" style="height:48px;v-text-anchor:middle;width:100%;" arcsize="8%" stroke="f" fillcolor="#0085FF">
+                                <w:anchorlock/>
+                                <center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:14px;font-weight:700;">Посмотреть, где бывает ребёнок</center>
+                              </v:roundrect>
+                            <![endif]-->
+                            <!--[if !mso]><!--><a href="{{.cta_walks_url}}" target="_blank">Посмотреть, где бывает ребёнок</a><!--<![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
+
+                <!-- TRANSPORT -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#E7F3FE; border-radius:20px;">
+                  <tr>
+                    <td style="padding:24px;">
+                      <img src="{{.transport_image}}" width="436" alt="Машина" style="width:100%; height:auto; margin:0 0 12px 0; border-radius:12px;" />
+                      <h2 class="h2" style="margin:0 0 8px 0;">Транспортные приключения</h2>
+                      <p class="p" style="margin:0 0 16px 0;">
+                        За месяц — {{.total_distance_by_car}} км на транспорте. В пути {{.total_route_time_hours}} ч {{.total_route_time_min}} мин.
+                      </p>
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="btn">
+                        <tr>
+                          <td align="center">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.cta_transport_url}}" style="height:48px;v-text-anchor:middle;width:100%;" arcsize="8%" stroke="f" fillcolor="#0085FF">
+                                <w:anchorlock/>
+                                <center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:14px;font-weight:700;">Посмотреть</center>
+                              </v:roundrect>
+                            <![endif]-->
+                            <!--[if !mso]><!--><a href="{{.cta_transport_url}}" target="_blank">Посмотреть</a><!--<![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
+
+                <!-- STATUS -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FEF6CD; border-radius:20px;">
+                  <tr>
+                    <td style="padding:24px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="font:700 16px/22px Roboto, Arial, sans-serif; color:#101214;">
+                            <span style="font-size:20px;">🏆</span> <span>&nbsp;{{.child_status}}</span>
+                          </td>
+                        </tr>
+                      </table>
+                      <p class="p" style="margin:12px 0 0 0;">
+                        Каждый месяц ваш ребёнок показывает, насколько он уникален. Сегодня {{.child_name}} получает титул…<br/>
+                        <em class="p">{{.child_status_description}}</em>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- spacer -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td height="12" style="line-height:12px; font-size:0;">&nbsp;</td></tr></table>
+
+                <!-- BELIEF -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF; border-radius:20px;">
+                  <tr>
+                    <td style="padding:24px;">
+                      <h2 class="h2" style="margin:0 0 8px 0;">Мы верим, что любая информация — возможность лучше понять интересы и привычки вашего ребёнка</h2>
+                      <p class="p" style="margin:0;">В следующем месяце {{.child_name}} отправится на новые приключения, а мы будем рядом, чтобы помогать вам следить за безопасностью и успехами вашего ребёнка.</p>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+          <!-- /WHITE BLOCK (closed before footer) -->
+
+          <!-- ===== FOOTER (inserted) ===== -->
+          <table role="presentation" cellpadding="0" cellspacing="0" class="card-footer mw-375 " width="604" style="background:#F5F5F5; border-radius:0px 0px 20px 20px; margin-top:0px;">
+            <tr>
+              <td class="card-body" style="padding:24px;">
+                <table role="presentation" width="100%">
+                  <tr>
+                    <td class="p" style="font-weight:700; padding-bottom:8px;">Помогаем воспитывать<br/>счастливых и успешных людей</td>
+                  </tr>
+                  <tr>
+                    <td class="small" style="padding-bottom:12px;">Подписывайтесь на {{.app_name}}</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- Social row -->
+                      <table role="presentation" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td style="padding-right:12px;">
+                            <a href="{{.social_main_url}}" target="_blank"><img src="{{.social_main_icon}}" width="32" height="32" alt="ГМД" /></a>
+                          </td>
+                          <td style="padding-right:12px;">
+                            <a href="{{.social_telegram_url}}" target="_blank"><img src="{{.social_telegram_icon}}" width="32" height="32" alt="Telegram" /></a>
+                          </td>
+                          <td style="padding-right:12px;">
+                            <a href="{{.social_vk_url}}" target="_blank"><img src="{{.social_vk_icon}}" width="32" height="32" alt="VK" /></a>
+                          </td>
+                          <td>
+                            <a href="{{.social_dzen_url}}" target="_blank"><img src="{{.social_dzen_icon}}" width="32" height="32" alt="Дзен" /></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <tr><td height="16" style="line-height:16px;">&nbsp;</td></tr>
+
+                  <tr>
+                    <td class="small" style="color:#6B7280;">
+                      Это сообщение отправлено на вашу электронную почту {{.email}}, потому что вы отличный родитель и подписаны на сервис «Где мои дети».
+                    </td>
+                  </tr>
+                  <tr><td height="8" style="line-height:8px;">&nbsp;</td></tr>
+                  <tr>
+                    <td class="small" style="color:#6B7280;">
+                      «Где мои дети» • ООО «РЕФЭРЭШ» • ИНН 5900243717<br/>
+                      614056 Пермь, улица Стахановская 54, литера А
+                    </td>
+                  </tr>
+
+                  <tr><td height="12" style="line-height:12px;">&nbsp;</td></tr>
+
+                  <tr>
+                    <td class="small">
+                      <a href="{{.terms_url}}" target="_blank">Условия использования</a> &nbsp;|&nbsp;
+                      <a href="{{.faq_url}}" target="_blank">Частые вопросы</a> &nbsp;|&nbsp;
+                      <a href="{{.unsubscribe_url}}" target="_blank">Отказаться от рассылки</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- /FOOTER -->
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
