@@ -25,35 +25,45 @@
         .fmk-email p,.fmk-email a,.fmk-email li {margin:0; font-family:'Roboto', Arial, Helvetica, sans-serif; font-weight:400; font-size:16px; line-height:20px;}
         .fmk-email p {color:#1F252E;}
         .fmk-email .small {font-size:14px; line-height:16px;}
-        .fmk-email .list {line-height:20px;}
+        .fmk-email .list-caption {margin-bottom: 8px;}
+        .fmk-email .list-text {margin-bottom: 8px; line-height:20px;}
+        .text-shadow {text-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.07);}
 
 
         /* ===== Layout helpers ===== */
         .fmk-wrapper {padding: 20px 0;}
         .fmk-btn a { display: block; text-align: center; padding: 14px 32px; font-weight: 700; font-size: 20px; line-height: 22px; border-radius: 16px; background: #0085FF; color: #FFFFFF !important;}
+        .fmk-btn-advantages a {display: block; text-align: center; padding: 8px 34px; font-weight: 500; font-size: 14px; line-height: 15px; white-space: nowrap; color: #0085FF !important; border-radius: 16px; background-color: #d9ecfe;}
         .fmk-container {width:100%; min-width: 307px; max-width: 604px; margin: 0 auto;}
         .fmk-container-padding {padding: 48px 60px;}
         .inner-block {padding: 40px;}
+        .block-icon {margin-bottom: 22px;}
         .block-icon img {width: 120px; margin-right: 11px; border-radius: 16px;}
+
+        /* ===== hidden ===== */
+        .only-desktop {display: table !important;}
+        .only-mobile{display: none !important;}
 
         /* ===== Mobile (≤600px) ===== */
         @media (max-width: 600px) {
             .fmk-wrapper {padding-top: 0 !important;padding-bottom: 0 !important;}
             .fmk-container-padding {padding: 40px 34px; !important;}
             .no-radius {border-radius:0 !important;}
-            .hero-desktop {display: none !important;}
-            .hero-mobile{display: table !important;}
+            .only-desktop {display: none !important;}
+            .only-mobile{display: table !important;}
             .fmk-email h1 {font-size:28px!important; line-height:30px!important;}
             .fmk-email h3 {font-size:15px !important; line-height:20px !important;}
-            .fmk-email .list {font-size:14px !important; line-height: 18px !important;}
+            .fmk-email .list-caption {margin-bottom: 6px !important;}
+            .fmk-email .list-text {margin-bottom: 6px !important; font-size:14px !important; line-height: 18px !important;}
             .inner-block{padding: 24px 20px; !important;}
+            .block-icon {margin-bottom: 20px !important;}
             .block-icon img {width: 80px !important; max-width: 80px !important;}
-            .block-icon td {padding-bottom: 20px !important;}
         }
     </style>
     <!--[if mso]>
         <style>
-            .fmk-email p,.fmk-email h1,.fmk-email h2,.fmk-email .small { font-family: Arial, sans-serif !important; }
+            .fmk-email p, .fmk-email a,.fmk-email li,.fmk-email h1,.fmk-email h2, .fmk-email h3, .fmk-email h4 { font-family: Arial, sans-serif !important; }
+            .text-shadow p {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=4, Color='#12000000', Positive='true');}
         </style>
     <![endif]-->
 </head>
@@ -76,7 +86,7 @@
                         <tr align="center">
                             <td>
                                 <!-- HERO DESKTOP -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="hero-desktop" style="display:table; min-height:558px;">
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="only-desktop" style="min-height:558px;">
                                     <tr align="center">
                                         <td class="fmk-container-padding"
                                             style="background-image: url('./assets/img/hero-desktop.png'); background-size: cover; background-position: top; background-repeat: no-repeat; vertical-align: top;"
@@ -102,7 +112,7 @@
                                 </table>
 
                                 <!-- HERO MOBILE -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="hero-mobile" style="display: none; min-height:524px;">
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="only-mobile" style="min-height:524px;">
                                     <tr align="center">
                                         <td class="fmk-container-padding"
                                             style="background-image: url('./assets/img/hero-mobile.png'); background-size: contain; background-position: top; background-repeat: no-repeat; vertical-align: top;"
@@ -140,10 +150,11 @@
                     <table class="fmk-container" role="presentation" width="484" cellpadding="0" cellspacing="0" border="0" style="background-color:#F9FAFA;">
                         <tr>
                             <td align="center" class="fmk-container-padding">
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                                    <!-- PREVIEW -->
+
+                                <!-- PREVIEW -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 40px;">
                                     <tr>
-                                        <td style="padding-bottom:40px;">
+                                        <td>
                                             <h2 style="margin-bottom:12px;">{{.child_name}}, здорово, что вы выбрали сервис «Где&nbsp;мои&nbsp;дети»! </h2>
                                             <p>
                                                 Теперь
@@ -152,9 +163,11 @@
                                             </p>
                                         </td>
                                     </tr>
+                                </table>
 
-                                    <!-- BLOCK: HOW USE -->
-                                    <tr style="border-bottom: 20px; margin-bottom: 20px;">
+                                <!-- BLOCK: HOW USE -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                    <tr>
                                         <td class="inner-block" style="border-radius: 24px; background-color: #E7F3FE;">
                                             <h2 style="margin-bottom: 30px;text-align: center;">Как использовать приложение на&nbsp;100%&nbsp;→</h2>
 
@@ -165,12 +178,12 @@
                                                         <!-- BLOCK: HOW USE LOOK -->
                                                         <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
-                                                                <td valign="top" style="padding-bottom: 22px;">
+                                                                <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                                     <img src="./assets/img/how-use-look.jpg" alt="Иконка: пины близких на карте">
                                                                 </td>
-                                                                <td valign="top" style="padding-bottom: 22px;">
-                                                                    <h3 style="margin-bottom: 8px;">Смотрите, где близкие на&nbsp;карте</h3>
-                                                                    <p class="list">
+                                                                <td valign="top">
+                                                                    <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Смотрите, где близкие на&nbsp;карте</h3>
+                                                                    <p class="list-text">
                                                                         Знайте, где они сейчас<br>
                                                                         и&nbsp;куда идут
                                                                     </p>
@@ -180,16 +193,16 @@
 
 
                                                         <!-- BLOCK: HOW USE ROUTE -->
-                                                        <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
                                                             <tr>
-                                                                <td valign="top" class="hero-mobile" style="display: none; padding-bottom: 0 !important;">
+                                                                <td valign="top" class="only-mobile" style="border-radius: 16px; overflow: hidden;">
                                                                     <img src="./assets/img/how-use-route.jpg" alt="Иконка: маршруты близких на карте">
                                                                 </td>
-                                                                <td valign="top" style="padding-bottom: 0 !important;">
-                                                                    <h3 style="margin-bottom: 8px;">Изучайте&nbsp;маршруты участников ваших кругов</h3>
-                                                                    <p class="list">Чтобы находить более безопасные или короткие пути&nbsp;вместе</p>
+                                                                <td valign="top">
+                                                                    <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Изучайте&nbsp;маршруты участников ваших кругов</h3>
+                                                                    <p class="list-text">Чтобы находить более безопасные или короткие пути&nbsp;вместе</p>
                                                                 </td>
-                                                                <td valign="top"class="block-icon hero-desktop" style="display: table; padding-bottom: 0 !important; margin-right: 0; margin-left: 11px;">
+                                                                <td valign="top"class="block-icon only-desktop" style="display: table; padding-bottom: 0 !important; margin-right: 0; margin-left: 11px; border-radius: 16px; overflow: hidden;">
                                                                     <img src="./assets/img/how-use-route.jpg" alt="Иконка: маршруты близких на карте" style="margin-right: 0;">
                                                                 </td>
                                                             </tr>
@@ -208,15 +221,21 @@
                                                             <center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:20px;font-weight:700;">Посмотреть на карте</center>
                                                         </v:roundrect>
                                                         <![endif]-->
-                                                        <!--[if !mso]><!--><a href="{{.cta_route_url}}" target="_blank">Посмотреть на карте</a><!--<![endif]-->
+                                                        <!--[if !mso]><!-->
+                                                        <a class="fmk-btn" href="{{.cta_route_url}}" target="_blank">
+                                                            Посмотреть на карте
+                                                        </a>
+                                                        <!--<![endif]-->
                                                     </td>
                                                 </tr>
                                             </table>
                                         </td>
                                     </tr>
+                                </table>
 
-                                    <!-- BLOCK: SETTINGS -->
-                                    <tr style="margin-bottom: 20px;">
+                                <!-- BLOCK: SETTINGS -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                    <tr>
                                         <td style="padding: 16px; border-radius: 20px; background-color: #FEF6CD;">
                                             <p style="padding-bottom: 10px;">Вы можете создавать неограниченное&nbsp;количество&nbsp;Кругов под&nbsp;ваши&nbsp;цели </p>
                                             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="table-layout: auto;">
@@ -261,9 +280,137 @@
                                             </table>
                                         </td>
                                     </tr>
+                                </table>
 
-
-
+                                <!-- BLOCK: ADVANTAGES -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                    <tr>
+                                        <td class="inner-block" style="border-radius: 24px; background-color: #E7F3FE;">
+                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td valign="top" style="border-radius: 16px; overflow: hidden;">
+                                                        <img src="./assets/img/advantages-track-the-route.png" alt="Иконка: пин близкого с посещенными местами">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">
+                                                            Узнавайте<br>
+                                                            о&nbsp;передвижениях
+                                                        </h3>
+                                                        <p class="list-text">Добавьте дом, школу, кафе, магазин и другие места, чтобы&nbsp;получать уведомления, когда члены вашей семьи туда приходят и уходят</p>
+                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.gmd_track_the_route_url}}" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
+                                                                        <w:anchorlock/>
+                                                                        <center style="color:#0085FF;font-family:Arial,sans-serif;font-size:14px;font-weight:500;line-height:15px;">Добавить место</center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <!--[if !mso]><!-->
+                                                                    <a href="{{.gmd_track_the_route_url}}" target="_blank">
+                                                                        Добавить место
+                                                                    </a>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td valign="top" style="border-radius: 16px; overflow: hidden;">
+                                                        <img src="./assets/img/advantages-ignoring-silent-mode.png" alt="Иконка: суперсигнал вызова близкого">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Дозванивайтесь даже при&nbsp;беззвучном режиме</h3>
+                                                        <p class="list-text">Когда ребёнок долго не берёт трубку, Суперсигнал помогает привлечь внимание даже в режиме без звука</p>
+                                                        <p class="small">
+                                                            <b>Совет</b>
+                                                            <span>: отправьте пробный сигнал, пока ребёнок рядом, чтобы звук сигнала не&nbsp;стал для него сюрпризом</span>
+                                                        </p>
+                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.gmd_calling_url}}" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
+                                                                        <w:anchorlock/>
+                                                                        <center style="color:#0085FF;font-family:Arial,sans-serif;font-size:14px;font-weight:500;line-height:15px;">Отправить сигнал</center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <!--[if !mso]><!-->
+                                                                    <a href="{{.gmd_calling_url}}" target="_blank">
+                                                                        Отправить сигнал
+                                                                    </a>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td valign="top" style="border-radius: 16px; overflow: hidden;">
+                                                        <img src="./assets/img/advantages-listening.png" alt="Иконка: звуковые волны вокруг пина близкого">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Слушайте звук вокруг ребёнка</h3>
+                                                        <p class="list-text">Послушайте звук рядом с&nbsp;телефоном ребёнка и убедитесь, что всё в порядке</p>
+                                                        <p class="small">
+                                                            <b>Совет</b>
+                                                            <span>: заранее обсудите с ребёнком, когда вы сможете слушать звук: например, когда он долго не отвечает на&nbsp;звонки и вы волнуетесь</span>
+                                                        </p>
+                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.gmd_listening_url}}" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
+                                                                        <w:anchorlock/>
+                                                                        <center style="color:#0085FF;font-family:Arial,sans-serif;font-size:14px;font-weight:500;line-height:15px;">Попробовать послушать</center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <!--[if !mso]><!-->
+                                                                    <a href="{{.gmd_listening_url}}" target="_blank">
+                                                                        Попробовать послушать
+                                                                    </a>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
+                                                <tr>
+                                                    <td valign="top" style="border-radius: 16px; overflow: hidden;">
+                                                        <img src="./assets/img/advantages-sos-signal.png" alt="Иконка: пин близкого с сигналом SOS">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Получайте SOS-сигнал от&nbsp;ребёнка</h3>
+                                                        <p class="list-text"> Если что-то случится, {{.child_name}} нажмёт кнопку SOS в приложении, а&nbsp;вы получите уведомление даже в&nbsp;беззвучном режиме и сможете быстрее прийти на помощь</p>
+                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                            <tr>
+                                                                <td align="center">
+                                                                    <!--[if mso]>
+                                                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.gmd_sos_url}}" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
+                                                                        <w:anchorlock/>
+                                                                        <center style="color:#0085FF;font-family:Arial,sans-serif;font-size:14px;font-weight:500;line-height:15px;">Проверить SOS-сигнал</center>
+                                                                    </v:roundrect>
+                                                                    <![endif]-->
+                                                                    <!--[if !mso]><!-->
+                                                                    <a href="{{.gmd_sos_url}}" target="_blank">
+                                                                        Проверить SOS-сигнал
+                                                                    </a>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
                                 </table>
 
                             </td>
