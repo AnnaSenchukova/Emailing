@@ -39,8 +39,15 @@
         .inner-block {padding: 40px;}
         .block-icon {margin-bottom: 22px;}
         .block-icon img {width: 120px; margin-right: 11px; border-radius: 16px;}
+        .tariffs-plans {margin: 20px 0;}
+        .tariffs-plans thead img {width: 41px;}
+        .tariffs-plans thead th {padding-bottom: 19px;}
+        .tariffs-plans tbody th {height: 17px; padding: 4px 0; padding-left: 6px; padding-right: 0; border-radius: 8px 0 0 8px;}
+        .tariffs-plans tbody .tr-odd {background-color: #ECEDEE;}
+        .tariffs-plans tbody .tr-even th { height: 27px;}
+        .tariffs-plans tbody .last {border-radius: 0 8px 8px 0;}
 
-        /* ===== hidden ===== */
+            /* ===== hidden ===== */
         .only-desktop {display: table !important;}
         .only-mobile{display: none !important;}
 
@@ -58,6 +65,14 @@
             .inner-block{padding: 24px 20px; !important;}
             .block-icon {margin-bottom: 20px !important;}
             .block-icon img {width: 80px !important; max-width: 80px !important;}
+            .tariffs-plans {margin: 24px 0 !important;}
+            .tariffs-plans tbody th {padding-left: 4px !important;}
+            .tariffs-plans tbody .tr-even th {height: 22px !important;}
+            .tariffs-plans thead img {width: 24px !important; float: left !important; padding-right: 2px !important;}
+            .tariffs-plans thead p {text-align: left !important;}
+            .tariffs-plans thead th {min-width: 100px !important; padding-bottom: 0 !important;}
+
+
         }
     </style>
     <!--[if mso]>
@@ -413,19 +428,183 @@
                                     </tr>
                                 </table>
 
+                                <!--BLOCK: LIFEHACK -->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 32px;">
+                                    <tr>
+                                        <td>
+                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 8px; padding: 16px; padding-bottom: 20px; border-radius: 20px; background-color: #E5F3FF;">
+                                                <tr>
+                                                    <td valign="top" style="margin-right: 8px;">
+                                                        <img src="./assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <p style="margin-bottom: 4px;"><b>Проверяйте заряд телефона ребёнка</b></p>
+                                                        <p>Подскажем, когда пора зарядить, чтобы ребёнок был на&nbsp;связи</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 8px; padding: 16px; padding-bottom: 20px; border-radius: 20px; background-color: #E5F3FF;">
+                                                <tr>
+                                                    <td valign="top" style="margin-right: 8px;">
+                                                        <img src="./assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
+                                                    </td>
+                                                    <td valign="top">
+                                                        <p style="margin-bottom: 4px;"><b>Читайте советы экспертов из разных сфер</b></p>
+                                                        <p>Миллионы пользователей не&nbsp;пропускают
+                                                            <a href="{{.articles_url}}" target="_blank">наши&nbsp;полезные статьи</a>
+                                                            <span>, присоединяйтесь</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!--BLOCK: TARIFFS PLANS-->
+                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+                                    <tr>
+                                        <td align="center">
+                                            <h2>Чтобы получить доступ ко всем функциям приложения, попробуйте план «Забота» или «Забота&nbsp;Плюс»</h2>
+
+                                            <table width="100%" cellspacing="0"  border="0" class="tariffs-plans">
+                                                <thead>
+                                                    <tr class="tariffs-plans-name">
+                                                        <th align="left" scope="col" style="opacity: 0; font-size: 0;">Настройки приложения</th>
+                                                        <th align="center" valign="top" scope="col">
+                                                            <img class="icon" src="./assets/img/tariffs-plans-care.png" alt="Логотип базового тарифа Забота(Care)">
+                                                            <p><b>Забота</b></p>
+                                                        </th>
+                                                        <th align="center"  valign="top" scope="col">
+                                                            <img class="icon" src="./assets/img/tariffs-plans-care-plus.png" alt="Логотип расширенного тарифа Забота плюс(Care +)">
+                                                            <p style="color: #FE3B84;"><b>Забота плюс</b></p>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="tr-odd" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Передвижения в&nbsp;реальном&nbsp;времени</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-even">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">История маршрутов</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-odd" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Время в играх и&nbsp;соцсетях</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-disable.png" alt="Маркер: Заблокировано" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-even" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Блокировка приложений</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-disable.png" alt="Маркер: Заблокировано" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-odd" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Защита от незнакомых звонков</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-disable.png" alt="Маркер: Заблокировано" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-even" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Защита от удаления приложения</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-disable.png" alt="Маркер: Заблокировано" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tr-odd" style="background-color: #ECEDEE;">
+                                                        <th align="left" scope="row">
+                                                            <p class="small">Премиум-иконка</p>
+                                                        </th>
+                                                        <td align="center">
+                                                            <img src="./assets/img/tariffs-plans-care-disable.png" alt="Маркер: Заблокировано" width="20" height="20">
+                                                        </td>
+                                                        <td align="center" class="last">
+                                                            <img src="./assets/img/tariffs-plans-care-plus-checkbox.png" alt="Маркер: Доступно" width="20" height="20">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn" style="margin-bottom: 16px;">
+                                                <tr>
+                                                    <td align="center">
+                                                        <!--[if mso]>
+                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{.choose_tariff_plan_url}}" style="height:52px;v-text-anchor:middle;width:100%;" arcsize="8%" stroke="f" fillcolor="#0085FF">
+                                                            <w:anchorlock/>
+                                                            <center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:20px;font-weight:700;">Выбрать план</center>
+                                                        </v:roundrect>
+                                                        <![endif]-->
+                                                        <!--[if !mso]><!-->
+                                                        <a class="fmk-btn" href="{{.choose_tariff_plan_url}}" target="_blank">
+                                                            Выбрать план
+                                                        </a>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <p>Остались вопросы или нужна помощь?</p>
+                                            <p>
+                                                <a href="{{.support_service_url}}" target="_blank">Пишите</a>
+                                                <span>,&nbsp;ответим&nbsp;24/7.</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
-
                     </table>
 
                 </td>
             </tr>
         </tbody>
+
+
         <tfoot>
             <tr>
                 <td></td>
             </tr>
         </tfoot>
+
+
     </table>
 
 
