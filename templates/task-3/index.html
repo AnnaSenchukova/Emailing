@@ -9,12 +9,25 @@
     <title>Приветствие</title>
     <!--[if !mso]><!-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/><!--<![endif]-->
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
     <style>
         /* ===== Base ===== */
         .fmk-email {width: 100%; margin: 0 !important; padding: 0 !important; background: #ECEDEE;}
         .fmk-email table {border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
         .fmk-email img {display: block; border: 0; outline: none; text-decoration: none;-ms-interpolation-mode: bicubic; height: auto; padding: 0;}
         .fmk-email a {text-decoration: none; color: #0085FF;}
+
+        /* ===== Containers ===== */
+        .fmk-wrapper {padding: 20px 0;}
+        .fmk-container {width:100%; min-width: 307px; max-width: 604px; margin: 0 auto;}
+        .fmk-container-padding {padding: 48px 60px;}
 
         /* ===== Text ===== */
         .fmk-email h1,.fmk-email h2,.fmk-email h3,.fmk-email h4 {margin:0; font-family: Verdana, Geneva, sans-serif; font-weight:700; letter-spacing: -0.5px; color:#1F252E;}
@@ -29,16 +42,16 @@
         .fmk-email .list-text {margin-bottom: 8px; line-height:20px;}
         .text-shadow {text-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.07);}
 
-
-        /* ===== Layout helpers ===== */
-        .fmk-wrapper {padding: 20px 0;}
+        /* ===== Button ===== */
         .fmk-btn a { display: block; text-align: center; padding: 14px 32px; font-weight: 700; font-size: 20px; line-height: 22px; border-radius: 16px; background: #0085FF; color: #FFFFFF !important;}
         .fmk-btn-advantages a {display: block; text-align: center; padding: 8px 34px; font-weight: 500; font-size: 14px; line-height: 15px; white-space: nowrap; color: #0085FF !important; border-radius: 16px; background-color: #d9ecfe;}
-        .fmk-container {width:100%; min-width: 307px; max-width: 604px; margin: 0 auto;}
-        .fmk-container-padding {padding: 48px 60px;}
+
+        /* ===== HOW USE and ADVANTAGES blocks ===== */
         .inner-block {padding: 40px;}
         .block-icon {margin-bottom: 22px;}
         .block-icon img {width: 120px; margin-right: 11px; border-radius: 16px;}
+
+        /* ===== TARIFFS PLANS blocks ===== */
         .tariffs-plans {margin: 20px 0;}
         .tariffs-plans thead img {width: 41px;}
         .tariffs-plans thead th {padding-bottom: 19px;}
@@ -47,24 +60,28 @@
         .tariffs-plans tbody .tr-even th { height: 27px;}
         .tariffs-plans tbody .last {border-radius: 0 8px 8px 0;}
 
-            /* ===== hidden ===== */
+        /* ===== hidden ===== */
         .only-desktop {display: table !important;}
         .only-mobile{display: none !important;}
 
         /* ===== Mobile (≤600px) ===== */
         @media (max-width: 600px) {
+            /* ===== Containers ===== */
             .fmk-wrapper {padding-top: 0 !important;padding-bottom: 0 !important;}
             .fmk-container-padding {padding: 40px 34px; !important;}
-            .no-radius {border-radius:0 !important;}
-            .only-desktop {display: none !important;}
-            .only-mobile{display: table !important;}
+
+            /* ===== Text ===== */
             .fmk-email h1 {font-size:28px!important; line-height:30px!important;}
             .fmk-email h3 {font-size:15px !important; line-height:20px !important;}
             .fmk-email .list-caption {margin-bottom: 6px !important;}
             .fmk-email .list-text {margin-bottom: 6px !important; font-size:14px !important; line-height: 18px !important;}
+
+            /* ===== HOW USE and ADVANTAGES blocks ===== */
             .inner-block{padding: 24px 20px; !important;}
             .block-icon {margin-bottom: 20px !important;}
             .block-icon img {width: 80px !important; max-width: 80px !important;}
+
+            /* ===== TARIFFS PLANS blocks ===== */
             .tariffs-plans {margin: 24px 0 !important;}
             .tariffs-plans tbody th {padding-left: 4px !important;}
             .tariffs-plans tbody .tr-even th {height: 22px !important;}
@@ -72,13 +89,17 @@
             .tariffs-plans thead p {text-align: left !important;}
             .tariffs-plans thead th {min-width: 100px !important; padding-bottom: 0 !important;}
 
-
+            /* ===== hidden ===== */
+            .only-desktop {display: none !important;}
+            .only-mobile{display: table !important;}
+            .no-radius {border-radius:0 !important;}
         }
     </style>
     <!--[if mso]>
         <style>
             .fmk-email p, .fmk-email a,.fmk-email li,.fmk-email h1,.fmk-email h2, .fmk-email h3, .fmk-email h4 { font-family: Arial, sans-serif !important; }
             .text-shadow p {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=4, Color='#12000000', Positive='true');}
+            .inner-block, .block-icon img, .tariffs-plans tbody th, .tariffs-plans tbody .last {border-radius: 0 !important;}
         </style>
     <![endif]-->
 </head>
@@ -94,6 +115,11 @@
             <tr>
                 <td align="center">
                     <!-- HERO -->
+                    <!--[if mso]>
+                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:484px;">
+                        <v:fill type="tile" src="./assets/img/hero-bg.png" color="#F9FAFA" />
+                        <v:textbox inset="0,0,0,0">
+                    <![endif]-->
                     <table role="presentation" width="484" cellpadding="0" cellspacing="0" border="0"
                            class="fmk-container no-radius"
                            style="background-color:#F9FAFA; background-image: url('./assets/img/hero-bg.png'); background-size: 100% 100%; background-position: top; background-repeat: no-repeat; vertical-align: top; border-radius: 24px 24px 0 0; overflow: hidden;"
@@ -101,6 +127,11 @@
                         <tr align="center">
                             <td>
                                 <!-- HERO DESKTOP -->
+                                <!--[if mso]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:100%;height:558px;">
+                                    <v:fill type="tile" src="./assets/img/hero-desktop.png" color="#F9FAFA" />
+                                    <v:textbox inset="0,0,0,0">
+                                <![endif]-->
                                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="only-desktop" style="min-height:558px;">
                                     <tr align="center">
                                         <td class="fmk-container-padding"
@@ -125,8 +156,17 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <!--[if mso]>
+                                </v:textbox>
+                                </v:rect>
+                                <![endif]-->
 
                                 <!-- HERO MOBILE -->
+                                <!--[if mso]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:100%;height:524px;display:none;">
+                                    <v:fill type="tile" src="./assets/img/hero-mobile.png" color="#F9FAFA" />
+                                    <v:textbox inset="0,0,0,0">
+                                <![endif]-->
                                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="only-mobile" style="min-height:524px;">
                                     <tr align="center">
                                         <td class="fmk-container-padding"
@@ -151,10 +191,18 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <!--[if mso]>
+                                </v:textbox>
+                                </v:rect>
+                                <![endif]-->
 
                             </td>
                         </tr>
                     </table>
+                    <!--[if mso]>
+                    </v:textbox>
+                    </v:rect>
+                    <![endif]-->
                 </td>
             </tr>
         </thead>
