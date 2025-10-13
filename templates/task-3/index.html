@@ -42,7 +42,11 @@
         .fmk-email .fade {color: #576275;}
         .fmk-email .list-caption {margin-bottom: 8px;}
         .fmk-email .list-text {margin-bottom: 8px; line-height:20px;}
-        .text-shadow {text-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.07);}
+
+
+        /* ===== Shadow ===== */
+        .box-shadow {box-shadow: 0 1.09px 7.34px rgba(158, 172, 231, 0.35);}
+        .text-shadow {text-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.07);}
 
         /* ===== Button ===== */
         .fmk-btn a { display: block; text-align: center; padding: 14px 32px; font-weight: 700; font-size: 20px; line-height: 22px; border-radius: 16px; background: #0085FF; color: #FFFFFF !important;}
@@ -102,6 +106,7 @@
     <!--[if mso]>
         <style>
             .fmk-email p, .fmk-email a,.fmk-email li,.fmk-email h1,.fmk-email h2, .fmk-email h3, .fmk-email h4 { font-family: Arial, sans-serif !important; }
+            .box-shadow {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1.09, Color='#599EACE7', Positive='true');}
             .text-shadow p {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=4, Color='#12000000', Positive='true');}
             .inner-block, .block-icon img, .tariffs-plans tbody th, .tariffs-plans tbody .last {border-radius: 0 !important;}
         </style>
@@ -707,7 +712,7 @@
                                                 <tr>
                                                     <td style="padding-right:10px;">
                                                         <a href="{{.socials_gdm_url}}" target="_blank">
-                                                            <img src="./assets/img/socials-gmd.png" width="40" height="40" alt="Логотип: Где мои дети" />
+                                                            <img class="box-shadow"  src="./assets/img/socials-gmd.png" width="40" height="40" alt="Логотип: Где мои дети" style="border-radius: 11px;"/>
                                                             <p style="height:0; font-size: 0; opacity: 0;">Где мои дети: главная</p>
                                                         </a>
                                                     </td>
