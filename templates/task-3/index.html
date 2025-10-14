@@ -102,6 +102,37 @@
             .fmk-email .only-mobile{display: table !important;}
             .fmk-email .no-radius {border-radius:0 !important;}
         }
+
+        /* ===== Dark Mode Support ===== */
+        @media (prefers-color-scheme: dark) {
+            /* Base dark mode styles */
+            .fmk-email {background: #1a1a1a !important;}
+
+            /* Text colors for dark mode */
+            .fmk-email h1, .fmk-email h2, .fmk-email h3, .fmk-email h4 {color: #ffffff !important;}
+            .fmk-email p {color: #e0e0e0 !important;}
+            .fmk-email .fade {color: #a0a0a0 !important;}
+
+            /* Container backgrounds for dark mode */
+            .fmk-email .fmk-container {background-color: #2d2d2d !important;}
+
+            /* Block backgrounds adapted for dark mode */
+            .fmk-email .inner-block[style*="background-color: #E7F3FE"] {background-color: #1e3a52 !important;}
+            .fmk-email td[style*="background-color: #FEF6CD"] {background-color: #4a4a2d !important;}
+            .fmk-email table[style*="background-color: #FFFFFF"] {background-color: #3d3d3d !important;}
+
+            /* Button adaptations */
+            .fmk-email .fmk-btn-advantages a {background-color: #2d4a66 !important;color: #7db8e8 !important;}
+
+            /* Tariff table adaptations */
+            .fmk-email .tariffs-plans tbody .tr-odd {background-color: #2d2d2d !important;}
+        }
+
+        /* Gmail-specific dark mode fixes */
+        [data-ogsc] .fmk-email {background: #1a1a1a !important;}
+        [data-ogsc] .fmk-email h1, [data-ogsc] .fmk-email h2, [data-ogsc] .fmk-email h3, [data-ogsc] .fmk-email h4 {color: #ffffff !important;}
+        [data-ogsc] .fmk-email p {color: #e0e0e0 !important;}
+        [data-ogsc] .fmk-email .fade {color: #a0a0a0 !important;}
     </style>
     <!--[if mso]>
         <style>
