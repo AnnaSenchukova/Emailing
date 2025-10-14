@@ -8,6 +8,12 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"/>
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <link rel="icon" href="./assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/img/favicon.png">
+
     <title>Приветствие</title>
     <!--[if !mso]><!-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/><!--<![endif]-->
@@ -117,17 +123,16 @@
             .fmk-email {background: #1a1a1a !important;}
 
             /* Text colors for dark mode */
-            .fmk-email h1, .fmk-email h2, .fmk-email h3, .fmk-email h4 {color: #ffffff !important;}
+            .fmk-email h2, .fmk-email h3, .fmk-email h4 {color: #ffffff !important;}
             .fmk-email p {color: #e0e0e0 !important;}
             .fmk-email .fade {color: #a0a0a0 !important;}
 
             /* Container backgrounds for dark mode */
             .fmk-email .fmk-container {background-color: #2d2d2d !important;}
-            .fmk-email table[style*="background-color:#F9FAFA"],
-            .fmk-email table[style*="background-color:#F5F5F5"] {background-color: #2d2d2d !important;}
+            .fmk-email tfoot  .fmk-container {background-color: #1e3a52 !important;}
 
             /* Block backgrounds adapted for dark mode */
-            .fmk-email .inner-block[style*="background-color: #E7F3FE"] {background-color: #1e3a52 !important;}
+            .fmk-email .inner-block {background-color: #1e3a52 !important;}
             .fmk-email td[style*="background-color: #FEF6CD"] {background-color: #4a4a2d !important;}
             .fmk-email table[style*="background-color: #FFFFFF"] {background-color: #3d3d3d !important;}
 
@@ -136,33 +141,46 @@
             .fmk-email .fmk-btn a {background: #0066cc !important;color: #ffffff !important;}
 
             /* Tariff table adaptations */
-            .fmk-email .tariffs-plans tbody .tr-odd {background-color: #2d2d2d !important;}
+            .fmk-email .tariffs-plans tbody .tr-odd {background-color: #4a4a2d !important;}
 
             /* Image adaptations */
             .fmk-email img {opacity: 0.9 !important;}
+
+            /*Not Invert*/
+            .fmk-email .not-invert  {color:#1F252E !important;}
         }
 
         /* Gmail-specific dark mode fixes */
         [data-ogsc] .fmk-email {background: #1a1a1a !important;}
-        [data-ogsc] .fmk-email h1, [data-ogsc] .fmk-email h2, [data-ogsc] .fmk-email h3, [data-ogsc] .fmk-email h4 {color: #ffffff !important;}
+        [data-ogsc] .fmk-email h2, [data-ogsc] .fmk-email h3, [data-ogsc] .fmk-email h4 {color: #ffffff !important;}
         [data-ogsc] .fmk-email p {color: #e0e0e0 !important;}
         [data-ogsc] .fmk-email .fade {color: #a0a0a0 !important;}
+        /*Not Invert*/
+        [data-ogsc] .fmk-email .not-invert {color:#1F252E !important;}
+
+
 
         /* Mail.ru specific dark mode fixes */
         @media (prefers-color-scheme: dark) {
             [data-mailru-dark] .fmk-email {background: #1a1a1a !important;}
-            [data-mailru-dark] .fmk-email h1, [data-mailru-dark] .fmk-email h2, [data-mailru-dark] .fmk-email h3, [data-mailru-dark] .fmk-email h4 {color: #ffffff !important;}
+            [data-mailru-dark] .fmk-email h2, [data-mailru-dark] .fmk-email h3, [data-mailru-dark] .fmk-email h4 {color: #ffffff !important;}
             [data-mailru-dark] .fmk-email p {color: #e0e0e0 !important;}
             [data-mailru-dark] .fmk-email .fmk-container {background-color: #2d2d2d !important;}
+            /*Not Invert*/
+            [data-mailru-dark] .fmk-email .not-invert {color:#1F252E !important;}
+
         }
 
         /* ===== Yandex Mail specific fixes ===== */
         @media (prefers-color-scheme: dark) {
             /* Yandex Mail dark mode support */
             [data-yandex-dark] .fmk-email {background: #1a1a1a !important;}
-            [data-yandex-dark] .fmk-email h1, [data-yandex-dark] .fmk-email h2, [data-yandex-dark] .fmk-email h3, [data-yandex-dark] .fmk-email h4 {color: #ffffff !important;}
+            [data-yandex-dark] .fmk-email h2, [data-yandex-dark] .fmk-email h3, [data-yandex-dark] .fmk-email h4 {color: #ffffff !important;}
             [data-yandex-dark] .fmk-email p {color: #e0e0e0 !important;}
             [data-yandex-dark] .fmk-email .fmk-container {background-color: #2d2d2d !important;}
+            /*Not Invert*/
+            [data-yandex-dark] .fmk-email .not-invert {color:#1F252E !important;}
+
         }
 
 
@@ -171,6 +189,8 @@
 
         /* Fallback for Yandex Mail auto-inversion */
         .fmk-email .yandex-no-invert {filter: invert(0) !important;-webkit-filter: invert(0) !important;}
+
+
 
 
     </style>
@@ -229,7 +249,7 @@
                                                         <h1 style="margin-bottom: 12px;">Добро&nbsp;пожаловать в&nbsp;«Где&nbsp;мои&nbsp;дети»!</h1>
 
                                                         <!-- Subtitle -->
-                                                        <p>Рассказываем о ваших возможностях в сервисе</p>
+                                                        <p class="not-invert">Рассказываем о ваших возможностях в сервисе</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -264,7 +284,7 @@
                                                         <h1 style="margin-bottom: 12px;">Добро&nbsp;пожаловать в&nbsp;«Где&nbsp;мои&nbsp;дети»!</h1>
 
                                                         <!-- Subtitle -->
-                                                        <p>Полный обзор функций для вас</p>
+                                                        <p class="not-invert">Полный обзор функций для вас</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -591,8 +611,8 @@
                                                         <img src="./assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
                                                     </td>
                                                     <td valign="top">
-                                                        <p style="margin-bottom: 4px;"><b>Проверяйте заряд телефона ребёнка</b></p>
-                                                        <p>Подскажем, когда пора зарядить, чтобы ребёнок был на&nbsp;связи</p>
+                                                        <p class="not-invert" style="margin-bottom: 4px;"><b>Проверяйте заряд телефона ребёнка</b></p>
+                                                        <p class="not-invert">Подскажем, когда пора зарядить, чтобы ребёнок был на&nbsp;связи</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -604,8 +624,8 @@
                                                         <img src="./assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
                                                     </td>
                                                     <td valign="top">
-                                                        <p style="margin-bottom: 4px;"><b>Читайте советы экспертов из разных сфер</b></p>
-                                                        <p>Миллионы пользователей не&nbsp;пропускают
+                                                        <p class="not-invert" style="margin-bottom: 4px;"><b>Читайте советы экспертов из разных сфер</b></p>
+                                                        <p class="not-invert">Миллионы пользователей не&nbsp;пропускают
                                                             <a href="{{.gmd_articles_url}}" target="_blank">наши&nbsp;полезные статьи</a>
                                                             <span>, присоединяйтесь</span>
                                                         </p>
@@ -830,7 +850,7 @@
                                                 <span>ИНН 5900243717</span>
                                             </p>
                                             <p class="extra-small fade">
-                                                <a class="extra-small fade" href="https://yandex.ru/maps/?text=614056%20Пермь%20Стахановская%2054%20литера%203" target="_blank" style="color: #576275; text-decoration: none;">
+                                                <a class="extra-small fade" href="https://yandex.ru/maps/?text=614056%20Пермь%20Стахановская%2054%20литера%203" target="_blank" style="color: #576275; text-decoration: none;">614056 Пермь Стахановская 54, литера 3</a>
                                                 <span>&ensp;•&ensp;</span>
                                                 <a class="extra-small fade" href="mailto:info@findmykids.org" target="_blank" style="padding-right: 20px;">info@findmykids.org</a>
                                             </p>
