@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="ru" spellcheck="false" dir="ltr">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -30,6 +30,14 @@
         :root {
             color-scheme: light dark;
             supported-color-schemes: light dark;
+        }
+
+        /* ===== Spellcheck Disable ===== */
+        .fmk-email * {
+            -webkit-text-decoration-skip: none !important;
+            text-decoration-skip: none !important;
+            -webkit-text-decoration-line: none !important;
+            text-decoration-line: none !important;
         }
 
         /* ===== Base ===== */
@@ -63,8 +71,8 @@
         .fmk-email .text-shadow {text-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.07);}
 
         /* ===== Button ===== */
-        .fmk-email .fmk-btn a { display: block; text-align: center; padding: 14px 32px; font-weight: 700; font-size: 20px; line-height: 22px; border-radius: 16px; background: #0085FF; color: #FFFFFF !important;}
-        .fmk-email .fmk-btn-advantages a {display: block; text-align: center; padding: 8px 34px; font-weight: 500; font-size: 14px; line-height: 15px; white-space: nowrap; color: #0085FF !important; border-radius: 16px; background-color: #d9ecfe;}
+        .fmk-email .fmk-btn a { display: block !important; text-align: center; padding: 14px 32px; font-weight: 700; font-size: 20px; line-height: 22px; border-radius: 16px; background-color: #0085FF; color: #FFFFFF !important;}
+        .fmk-email .fmk-btn-advantages a {display: block !important; text-align: center; padding: 8px 34px; font-weight: 500; font-size: 14px; line-height: 15px; white-space: nowrap; color: #0085FF !important; border-radius: 16px; background-color: #d9ecfe;}
 
         /* ===== HOW USE and ADVANTAGES blocks ===== */
         .fmk-email .inner-block {padding: 40px;}
@@ -129,7 +137,7 @@
 
             /* Container backgrounds for dark mode */
             .fmk-email .fmk-container {background-color: #2d2d2d !important;}
-            .fmk-email tfoot  .fmk-container {background-color: #1e3a52 !important;}
+            .fmk-email tfoot .fmk-container {background-color: #1e3a52 !important;}
 
             /* Block backgrounds adapted for dark mode */
             .fmk-email .inner-block {background-color: #1e3a52 !important;}
@@ -157,6 +165,8 @@
         [data-ogsc] .fmk-email .fade {color: #a0a0a0 !important;}
         /*Not Invert*/
         [data-ogsc] .fmk-email .not-invert {color:#1F252E !important;}
+        /* ===== Spellcheck Disable for Gmail ===== */
+        [data-ogsc] * {-webkit-text-decoration-skip: none !important;text-decoration-skip: none !important;}
 
 
 
@@ -180,9 +190,7 @@
             [data-yandex-dark] .fmk-email .fmk-container {background-color: #2d2d2d !important;}
             /*Not Invert*/
             [data-yandex-dark] .fmk-email .not-invert {color:#1F252E !important;}
-
         }
-
 
         /* Fallback for Mail.ru auto-inversion */
         .fmk-email .no-dark-mode {mix-blend-mode: normal !important;}
@@ -191,15 +199,18 @@
         .fmk-email .yandex-no-invert {filter: invert(0) !important;-webkit-filter: invert(0) !important;}
 
 
-
-
     </style>
     <!--[if mso]>
     <style>
+        * { font-family: Arial, sans-serif !important; text-decoration: none !important;}
         .fmk-email p, .fmk-email a,.fmk-email li,.fmk-email h1,.fmk-email h2, .fmk-email h3, .fmk-email h4 { font-family: Arial, sans-serif !important; }
         .fmk-email .box-shadow {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1.09, Color='#599EACE7', Positive='true');}
         .fmk-email .text-shadow p {filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=4, Color='#12000000', Positive='true');}
         .fmk-email .inner-block, .fmk-email .block-icon img, .fmk-email .tariffs-plans tbody th, .fmk-email .tariffs-plans tbody .last {border-radius: 0 !important;}
+        .blue-text {
+            color: #0000FF !important;
+            mso-color-index: 5;
+        }
     </style>
     <![endif]-->
 </head>
@@ -210,7 +221,7 @@
     </div>
 
     <!-- OUTER WRAPPER -->
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="fmk-wrapper">
+    <table role="presentation" width="100%" cellpadding="0" border="0" class="fmk-wrapper">
         <thead>
             <tr>
                 <td align="center">
@@ -310,18 +321,18 @@
             <tr>
                 <td>
                     <!-- CONTENT WRAPPER -->
-                    <table class="fmk-container" role="presentation" width="484" cellpadding="0" cellspacing="0" border="0" style="background-color:#F9FAFA;">
+                    <table class="fmk-container" role="presentation" width="484" cellspacing="0" border="0" style="background-color:#F9FAFA;">
                         <tr>
                             <td align="center" class="fmk-container-page">
 
                                 <!-- PREVIEW -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 40px;">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" style="margin-bottom: 40px;">
                                     <tr>
                                         <td>
                                             <h2 style="margin-bottom:12px;">Алиса, здорово, что вы выбрали сервис «Где&nbsp;мои&nbsp;дети»! </h2>
                                             <p>
                                                 Теперь
-                                                <a href="https://example.com/track-route" target="_blank">по&nbsp;1&nbsp;клику</a>
+                                                <a href="https://example.com/track-route" target="_blank" rel="noopener noreferrer">по&nbsp;1&nbsp;клику</a>
                                                 можете не только узнать,&nbsp;где&nbsp;ваши&nbsp;близкие сейчас, но&nbsp;и&nbsp;быть&nbsp;на&nbsp;связи, знать, что&nbsp;происходит&nbsp;у&nbsp;ребёнка и&nbsp;многое другое.&nbsp;В&nbsp;этом&nbsp;письме познакомим вас со&nbsp;всеми полезными функциями.
                                             </p>
                                         </td>
@@ -329,17 +340,17 @@
                                 </table>
 
                                 <!-- BLOCK: HOW USE -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" style="margin-bottom: 20px;">
                                     <tr>
                                         <td class="inner-block" style="border-radius: 24px; background-color: #E7F3FE;">
                                             <h2 style="margin-bottom: 30px;text-align: center;">Как использовать приложение на&nbsp;100%&nbsp;→</h2>
 
-                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding-bottom: 30px;">
+                                            <table role="presentation" width="100%" cellspacing="0" border="0">
                                                 <tr>
-                                                    <td>
+                                                    <td style="padding-bottom: 30px;">
 
                                                         <!-- Card: Look -->
-                                                        <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                        <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0">
                                                             <tr>
                                                                 <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                                     <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/how-use-look.jpg" alt="Иконка: пины близких на карте">
@@ -356,14 +367,14 @@
 
 
                                                         <!-- Card: Route -->
-                                                        <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
+                                                        <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
                                                             <tr>
                                                                 <td valign="top" class="only-mobile" style="border-radius: 16px; overflow: hidden;">
                                                                     <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/how-use-route.jpg" alt="Иконка: маршруты близких на карте">
                                                                 </td>
                                                                 <td valign="top">
                                                                     <h3 class="text-shadow list-caption" style="margin-bottom: 8px;">Изучайте&nbsp;маршруты участников ваших кругов</h3>
-                                                                    <p class="list-text">Чтобы находить более безопасные или короткие пути&nbsp;вместе</p>
+                                                                    <p class="list-text">Чтобы находить более безопасные или&nbsp;короткие пути&nbsp;вместе</p>
                                                                 </td>
                                                                 <td valign="top"class="block-icon only-desktop" style="display: table; padding-bottom: 0 !important; margin-right: 0; margin-left: 11px; border-radius: 16px; overflow: hidden;">
                                                                     <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/how-use-route.jpg" alt="Иконка: маршруты близких на карте" style="margin-right: 0;">
@@ -376,9 +387,9 @@
                                             </table>
 
                                             <!-- Button -->
-                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn">
+                                            <table role="presentation" width="100%" cellpadding="0" border="0" class="fmk-btn">
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="center" style="background-color: #0085FF; border-radius: 16px;">
                                                         <!--[if mso]>
                                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/track-route" style="height:52px;v-text-anchor:middle;width:100%;" arcsize="8%" stroke="f" fillcolor="#0085FF">
                                                             <w:anchorlock/>
@@ -386,7 +397,7 @@
                                                         </v:roundrect>
                                                         <![endif]-->
                                                         <!--[if !mso]><!-->
-                                                        <a class="fmk-btn" href="https://example.com/track-route" target="_blank">
+                                                        <a class="fmk-btn" href="https://example.com/track-route" target="_blank" rel="noopener noreferrer">
                                                             Посмотреть на карте
                                                         </a>
                                                         <!--<![endif]-->
@@ -398,16 +409,16 @@
                                 </table>
 
                                 <!-- BLOCK: SETTINGS -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" style="margin-bottom: 20px;">
                                     <tr>
                                         <td style="padding: 16px; border-radius: 20px; background-color: #FEF6CD;">
                                             <p style="padding-bottom: 10px;">Вы можете создавать неограниченное&nbsp;количество&nbsp;Кругов под&nbsp;ваши&nbsp;цели </p>
-                                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="table-layout: auto;">
+                                            <table role="presentation" cellpadding="0" border="0" style="table-layout: auto;">
                                                 <tr>
 
                                                     <!-- Round: Family -->
                                                     <td valign="middle" style="padding-right: 8px;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;"  >
+                                                        <table cellpadding="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;"  >
                                                             <tr>
                                                                 <td valign="middle" style="padding-right: 4px;">
                                                                     <img width="24" src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/settings-round-family.png" alt="Иконка: круг семья">
@@ -421,7 +432,7 @@
 
                                                     <!-- Round: Friends -->
                                                     <td valign="middle" style="padding-right: 8px;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;"  >
+                                                        <table cellpadding="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;"  >
                                                             <tr>
                                                                 <td valign="middle" style="padding-right: 4px;">
                                                                     <img width="24" src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/settings-round-friends.png" alt="Иконка: круг семья">
@@ -435,7 +446,7 @@
 
                                                     <!-- Round: Colleagues -->
                                                     <td valign="middle" style="padding-right: 8px;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;" >
+                                                        <table cellpadding="0" border="0" style="padding: 8px; white-space: nowrap; border-radius: 16px; overflow: hidden; background-color: #FFFFFF;" >
                                                             <tr>
                                                                 <td valign="middle" style="padding-right: 4px;">
                                                                     <img width="24" src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/settings-round-colleagues.png" alt="Иконка: круг семья">
@@ -453,12 +464,12 @@
                                 </table>
 
                                 <!-- BLOCK: ADVANTAGES -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 20px;">
+                                <table role="presentation" width="100%" cellspacing="0" border="0" style="margin-bottom: 20px;">
                                     <tr>
                                         <td class="inner-block" style="border-radius: 24px; background-color: #E7F3FE;">
 
                                             <!-- Card: track the route -->
-                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0">
                                                 <tr>
                                                     <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                         <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/advantages-add-place.png" alt="Иконка: пин близкого с посещенными местами">
@@ -471,9 +482,9 @@
                                                         <p class="list-text">Добавьте дом, школу, кафе, магазин и другие места, чтобы&nbsp;получать уведомления, когда члены вашей семьи туда приходят и уходят</p>
 
                                                         <!-- Button-Advantages -->
-                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
                                                             <tr>
-                                                                <td align="center">
+                                                                <td align="center" style="border-radius: 16px; background-color: #d9ecfe;">
                                                                     <!--[if mso]>
                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/add-place" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
                                                                         <w:anchorlock/>
@@ -481,7 +492,7 @@
                                                                     </v:roundrect>
                                                                     <![endif]-->
                                                                     <!--[if !mso]><!-->
-                                                                    <a href="https://example.com/add-place" target="_blank">
+                                                                    <a href="https://example.com/add-place" target="_blank" rel="noopener noreferrer">
                                                                         Добавить место
                                                                     </a>
                                                                     <!--<![endif]-->
@@ -493,7 +504,7 @@
                                             </table>
 
                                             <!-- Card: Ignoring silent mode -->
-                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0">
                                                 <tr>
                                                     <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                         <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/advantages-ignoring-silent-mode.png" alt="Иконка: суперсигнал вызова близкого">
@@ -507,9 +518,9 @@
                                                         </p>
 
                                                         <!-- Button-Advantages -->
-                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
                                                             <tr>
-                                                                <td align="center">
+                                                                <td align="center" style="border-radius: 16px; background-color: #d9ecfe;">
                                                                     <!--[if mso]>
                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/calling" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
                                                                         <w:anchorlock/>
@@ -517,7 +528,7 @@
                                                                     </v:roundrect>
                                                                     <![endif]-->
                                                                     <!--[if !mso]><!-->
-                                                                    <a href="https://example.com/calling" target="_blank">
+                                                                    <a href="https://example.com/calling" target="_blank" rel="noopener noreferrer">
                                                                         Отправить сигнал
                                                                     </a>
                                                                     <!--<![endif]-->
@@ -529,7 +540,7 @@
                                             </table>
 
                                             <!-- Card: listening -->
-                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                            <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0">
                                                 <tr>
                                                     <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                         <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/advantages-listening.png" alt="Иконка: звуковые волны вокруг пина близкого">
@@ -543,9 +554,9 @@
                                                         </p>
 
                                                         <!-- Button-Advantages -->
-                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
                                                             <tr>
-                                                                <td align="center">
+                                                                <td align="center" style="border-radius: 16px; background-color: #d9ecfe;">
                                                                     <!--[if mso]>
                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/listening" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
                                                                         <w:anchorlock/>
@@ -553,7 +564,7 @@
                                                                     </v:roundrect>
                                                                     <![endif]-->
                                                                     <!--[if !mso]><!-->
-                                                                    <a href="https://example.com/listening" target="_blank">
+                                                                    <a href="https://example.com/listening" target="_blank" rel="noopener noreferrer">
                                                                         Попробовать послушать
                                                                     </a>
                                                                     <!--<![endif]-->
@@ -565,7 +576,7 @@
                                             </table>
 
                                             <!-- Card: sos-signal -->
-                                            <table class="block-icon" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
+                                            <table class="block-icon" role="presentation" width="100%" cellspacing="0" border="0" style="margin-bottom: 0 !important;">
                                                 <tr>
                                                     <td valign="top" style="border-radius: 16px; overflow: hidden;">
                                                         <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/advantages-sos-signal.png" alt="Иконка: пин близкого с сигналом SOS">
@@ -575,9 +586,9 @@
                                                         <p class="list-text"> Если что-то случится, Алиса нажмёт кнопку SOS в приложении, а&nbsp;вы получите уведомление даже в&nbsp;беззвучном режиме и сможете быстрее прийти на помощь</p>
 
                                                         <!-- Button-Advantages -->
-                                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0" class="fmk-btn-advantages only-mobile" style="margin-top: 12px; margin-bottom: 4px;">
                                                             <tr>
-                                                                <td align="center">
+                                                                <td align="center" style="border-radius: 16px; background-color: #d9ecfe;">
                                                                     <!--[if mso]>
                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/sos" style="height:47px;v-text-anchor:middle;width:100%;" arcsize="34%" stroke="f" fillcolor="#d9ecfe">
                                                                         <w:anchorlock/>
@@ -585,7 +596,7 @@
                                                                     </v:roundrect>
                                                                     <![endif]-->
                                                                     <!--[if !mso]><!-->
-                                                                    <a href="https://example.com/sos" target="_blank">
+                                                                    <a href="https://example.com/sos" target="_blank" rel="noopener noreferrer">
                                                                         Проверить SOS-сигнал
                                                                     </a>
                                                                     <!--<![endif]-->
@@ -600,35 +611,45 @@
                                 </table>
 
                                 <!--BLOCK: LIFEHACK -->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 32px;">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" style="margin-bottom: 32px;">
                                     <tr>
                                         <td>
-
-                                            <!-- Lifehack 1 -->
-                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 8px; padding: 16px; padding-bottom: 20px; border-radius: 20px; background-color: #E5F3FF;">
+                                            <table role="presentation" width="100%" cellspacing="0" border="0" style="margin-bottom: 8px;">
                                                 <tr>
-                                                    <td valign="top" style="margin-right: 8px;">
-                                                        <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
-                                                    </td>
-                                                    <td valign="top">
-                                                        <p class="not-invert" style="margin-bottom: 4px;"><b>Проверяйте заряд телефона ребёнка</b></p>
-                                                        <p class="not-invert">Подскажем, когда пора зарядить, чтобы ребёнок был на&nbsp;связи</p>
+                                                    <td style="margin-bottom: 8px; border-radius: 20px; padding: 16px 16px 20px 16px; background: #E5F3FF;">
+                                                        <!-- Lifehack 1 -->
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td valign="top" style="margin-right: 8px;">
+                                                                    <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <p class="not-invert" style="margin-bottom: 4px;"><b>Проверяйте заряд телефона ребёнка</b></p>
+                                                                    <p class="not-invert">Подскажем, когда пора зарядить, чтобы ребёнок был на&nbsp;связи</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
                                                     </td>
                                                 </tr>
                                             </table>
-
-                                            <!-- Lifehack 2 -->
-                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 8px; padding: 16px; padding-bottom: 20px; border-radius: 20px; background-color: #E5F3FF;">
+                                            <table role="presentation" width="100%" cellpadding="0" border="0" style="margin-bottom: 8px;">
                                                 <tr>
-                                                    <td valign="top" style="margin-right: 8px;">
-                                                        <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
-                                                    </td>
-                                                    <td valign="top">
-                                                        <p class="not-invert" style="margin-bottom: 4px;"><b>Читайте советы экспертов из разных сфер</b></p>
-                                                        <p class="not-invert">Миллионы пользователей не&nbsp;пропускают
-                                                            <a href="https://example.com/articles" target="_blank">наши&nbsp;полезные статьи</a>
-                                                            <span>, присоединяйтесь</span>
-                                                        </p>
+                                                    <td style="margin-bottom: 8px; border-radius: 20px; padding: 16px 16px 20px 16px; background: #E5F3FF;">
+                                                        <!-- Lifehack 2 -->
+                                                        <table role="presentation" width="100%" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td valign="top" style="margin-right: 8px;">
+                                                                    <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/lifehack-icon.png" alt="Маркер списка: лампочка">
+                                                                </td>
+                                                                <td valign="top">
+                                                                    <p class="not-invert" style="margin-bottom: 4px;"><b>Читайте советы экспертов из разных сфер</b></p>
+                                                                    <p class="not-invert">Миллионы пользователей не&nbsp;пропускают
+                                                                        <a href="https://example.com/articles" target="_blank" rel="noopener noreferrer">наши&nbsp;полезные статьи</a>
+                                                                        <span>, присоединяйтесь</span>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -637,7 +658,7 @@
                                 </table>
 
                                 <!--BLOCK: TARIFFS PLANS-->
-                                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" align="center">
                                     <tr>
                                         <td align="center">
                                             <h2 class="tariffs-plans-title">Чтобы получить доступ ко всем функциям приложения, попробуйте план «Забота» или «Забота&nbsp;Плюс»</h2>
@@ -645,7 +666,7 @@
                                             <table width="100%" cellspacing="0"  border="0" class="tariffs-plans">
                                                 <thead>
                                                     <tr>
-                                                        <th align="left" scope="col" style="opacity: 0; font-size: 0;">Настройки приложения</th>
+                                                        <th align="left" scope="col" style="mso-hide: all; max-height: 0; overflow: hidden; font-size: 0; line-height: 0;"><p style="mso-hide: all; max-height: 0; overflow: hidden; font-size: 0; line-height: 0;">Настройки приложения</p></th>
                                                         <th align="center" valign="top" scope="col">
                                                             <img class="icon" src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/tariffs-plans-care.png" alt="Логотип базового тарифа Забота(Care)">
                                                             <p><b>Забота</b></p>
@@ -658,7 +679,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr class="tr-odd" style="background-color: #ECEDEE;">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Передвижения в&nbsp;реальном&nbsp;времени</p>
                                                         </th>
                                                         <td align="center">
@@ -669,7 +690,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-even">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">История маршрутов</p>
                                                         </th>
                                                         <td align="center">
@@ -680,7 +701,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-odd" style="background-color: #ECEDEE;">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Время в играх и&nbsp;соцсетях</p>
                                                         </th>
                                                         <td align="center">
@@ -691,7 +712,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-even">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Блокировка приложений</p>
                                                         </th>
                                                         <td align="center">
@@ -702,7 +723,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-odd" style="background-color: #ECEDEE;">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Защита от незнакомых звонков</p>
                                                         </th>
                                                         <td align="center">
@@ -713,7 +734,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-even">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Защита от удаления приложения</p>
                                                         </th>
                                                         <td align="center">
@@ -724,7 +745,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="tr-odd" style="background-color: #ECEDEE;">
-                                                        <th align="left" scope="row">
+                                                        <th align="left" scope="row" style="font-weight: 400;">
                                                             <p class="small">Премиум-иконка</p>
                                                         </th>
                                                         <td align="center">
@@ -738,17 +759,17 @@
                                             </table>
 
                                             <!--  Button  -->
-                                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="fmk-btn" style="margin-bottom: 16px;">
+                                            <table role="presentation" width="100%" cellspacing="0" border="0" class="fmk-btn" style="margin-bottom: 16px;">
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="center" style="background-color: #0085FF; border-radius: 16px;">
                                                         <!--[if mso]>
-                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/choose-tariff" style="height:52px;v-text-anchor:middle;width:100%;" arcsize="8%" stroke="f" fillcolor="#0085FF">
+                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com/choose-tariff" style="height:52px;v-text-anchor:middle;width:100%;text-decoration: none !important; -webkit-text-decoration: none !important; text-decoration-line: none !important; " arcsize="8%" stroke="f" fillcolor="#0085FF">
                                                             <w:anchorlock/>
                                                             <center style="color:#FFFFFF;font-family:Arial,sans-serif;font-size:20px;font-weight:700;">Выбрать план</center>
                                                         </v:roundrect>
                                                         <![endif]-->
                                                         <!--[if !mso]><!-->
-                                                        <a class="fmk-btn" href="https://example.com/choose-tariff" target="_blank">
+                                                        <a class="fmk-btn" href="https://example.com/choose-tariff" target="_blank" rel="noopener noreferrer">
                                                             Выбрать план
                                                         </a>
                                                         <!--<![endif]-->
@@ -759,7 +780,11 @@
                                             <!-- Support -->
                                             <p>Остались вопросы или нужна помощь?</p>
                                             <p>
-                                                <a href="mailto:info@findmykids.org" target="_blank">Пишите</a>
+                                                <a href="mailto:info@findmykids.org" target="_blank" style="text-decoration:none !important; text-decoration: none;">
+                                                    <span style="text-decoration:none !important; text-decoration: none;">
+                                                        Пишите
+                                                    </span>
+                                                </a>
                                                 <span>,&nbsp;ответим&nbsp;24/7.</span>
                                             </p>
                                         </td>
@@ -777,11 +802,11 @@
         <tfoot>
             <tr>
                 <td>
-                    <table class="fmk-container no-radius" role="presentation" width="484" cellpadding="0" cellspacing="0" border="0" style="background-color:#F5F5F5; border-radius: 0 0 24px 24px; overflow: hidden;">
+                    <table class="fmk-container no-radius" role="presentation" width="484" cellpadding="0" border="0" style="background-color:#F5F5F5; border-radius: 0 0 24px 24px; overflow: hidden;">
                         <tr>
-                            <td align="left" class="fmk-container-footer">
+                            <td align="left" class="fmk-container-footer" style="background-color:#F5F5F5; border-radius: 0 0 24px 24px; overflow: hidden;">
 
-                                <table role="presentation" width="100%">
+                                <table role="presentation" width="100%" cellpadding="0" border="0" >
 
                                     <!-- Slogan -->
                                     <tr>
@@ -799,30 +824,26 @@
                                     <tr>
                                         <td style="padding-bottom: 24px;">
                                             <p class="small" style="margin-bottom:10px;">Подписывайтесь на&nbsp;«Где&nbsp;мои&nbsp;дети»</p>
-                                            <table role="presentation" cellpadding="0" cellspacing="0">
+                                            <table role="presentation" cellpadding="0" border="0">
                                                 <tr>
-                                                    <td style="padding-right:10px;">
-                                                        <a href="https://example.com/app" target="_blank">
+                                                    <td align="top" style="padding-right:10px;">
+                                                        <a style="display: block;" href="https://example.com/app" target="_blank" rel="noopener noreferrer">
                                                             <img class="box-shadow"  src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/socials-gmd.png" width="40" height="40" alt="Логотип: Где мои дети" style="border-radius: 11px;"/>
-                                                            <p style="height:0; font-size: 0; opacity: 0;">Где мои дети: главная</p>
                                                         </a>
                                                     </td>
-                                                    <td style="padding-right:10px;">
-                                                        <a href="https://t.me/gdemoideti" target="_blank">
+                                                    <td align="top"  style="padding-right:10px;">
+                                                        <a style="display: block;" href="https://t.me/gdemoideti" target="_blank" rel="noopener noreferrer">
                                                             <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/socials-telegram.png" width="40" height="40" alt="Логотип: Telegram" />
-                                                            <p style="height:0; font-size: 0; opacity: 0;">Telegram</p>
                                                         </a>
                                                     </td>
-                                                    <td style="padding-right:10px;">
-                                                        <a href="https://vk.com/gdemoideti" target="_blank">
+                                                    <td align="top" style="padding-right:10px;">
+                                                        <a style="display: block;" href="https://vk.com/gdemoideti" target="_blank" rel="noopener noreferrer">
                                                             <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/socials-vk.png" width="40" height="40" alt="Логотип: VK" />
-                                                            <p style="height:0; font-size: 0; opacity: 0;">VK</p>
                                                         </a>
                                                     </td>
-                                                    <td>
-                                                        <a href="https://dzen.ru/gdemoideti" target="_blank">
-                                                            <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/socials-zen.png"width="89" height="40" alt="Логотип: Дзен" />
-                                                            <p style="height:0; font-size: 0; opacity: 0;">Дзен</p>
+                                                    <td align="top">
+                                                        <a style="display: block;" href="https://dzen.ru/gdemoideti" target="_blank" rel="noopener noreferrer">
+                                                            <img src="https://raw.githubusercontent.com/AnnaSenchukova/Emailing/main/templates/task-3/assets/img/socials-zen.png" width="89" height="40" alt="Логотип: Дзен" />
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -833,24 +854,26 @@
                                     <!-- Disclaimer -->
                                     <tr>
                                         <td style="padding-bottom: 20px;">
-                                            <p class="small">Это сообщение отправлено на вашу электронную&nbsp;почту&nbsp;rtopo@gmail.com,<br/>
-                                                потому что вы отличный родитель и&nbsp;подписаны на&nbsp;сервис&nbsp;«Где&nbsp;мои&nbsp;дети».
+                                            <p class="small">
+                                                <span style="color: inherit !important; text-decoration: none !important; pointer-events: none;">Это сообщение отправлено на вашу электронную&nbsp;почту&nbsp;rtopo@gmail.com,</span>
                                             </p>
+                                            <p class="small">потому что вы отличный родитель и&nbsp;подписаны на&nbsp;сервис&nbsp;«Где&nbsp;мои&nbsp;дети».</p>
                                         </td>
                                     </tr>
 
                                     <!-- Contacts -->
+
                                     <tr>
-                                        <td style="padding-bottom: 6px;">
-                                            <p class="extra-small fade" style="padding-bottom: 4px;">
-                                                <span>«Где мои дети»</span>
+                                        <td style="padding-bottom: 6px; color: #576275 !important;">
+                                            <p class="extra-small fade" style="padding-bottom: 4px; color: #576275 !important;">
+                                                <span style="color: #576275 !important; color: #576275;">«Где мои дети»</span>
                                                 <span>&ensp;•&ensp;</span>
                                                 <span>ООО «РЕФЭРЭШ»</span>
                                                 <span>&ensp;•&ensp;</span>
-                                                <span>ИНН 5900243717</span>
+                                                <span style="color: inherit !important; text-decoration: none !important; pointer-events: none;">ИНН 5900243717</span>
                                             </p>
                                             <p class="extra-small fade">
-                                                <a class="extra-small fade" href="https://yandex.ru/maps/?text=614056%20Пермь%20Стахановская%2054%20литера%203" target="_blank" style="color: #576275; text-decoration: none;">614056 Пермь Стахановская 54, литера 3</a>
+                                                <a class="extra-small fade" href="https://yandex.ru/maps/?text=614056%20Пермь%20Стахановская%2054%20литера%203" target="_blank" rel="noopener noreferrer" style="color: #576275; text-decoration: none;">614056 Пермь Стахановская 54, литера 3</a>
                                                 <span>&ensp;•&ensp;</span>
                                                 <a class="extra-small fade" href="mailto:info@findmykids.org" target="_blank" style="padding-right: 20px;">info@findmykids.org</a>
                                             </p>
@@ -859,10 +882,10 @@
 
                                     <!-- Info -->
                                     <tr>
-                                        <td align="center">
-                                            <a class="extra-small" href="https://example.com/rules" target="_blank" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap;">Условия&nbsp;использования</a>
-                                            <a class="extra-small" href="https://example.com/faq" target="_blank" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap;">Частые&nbsp;вопросы</a>
-                                            <a class="extra-small" href="https://example.com/unsubscribe" target="_blank" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap;">Отказаться&nbsp;от&nbsp;рассылки</a>
+                                        <td align="center" class="extra-small">
+                                            <a class="extra-small" href="https://example.com/rules" target="_blank" rel="noopener noreferrer" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap; text-decoration: none !important;">Условия&nbsp;использования</a>
+                                            <a class="extra-small" href="https://example.com/faq" target="_blank" rel="noopener noreferrer" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap; text-decoration: none !important;">Частые&nbsp;вопросы</a>
+                                            <a class="extra-small" href="https://example.com/unsubscribe" target="_blank" rel="noopener noreferrer" style="display: inline-block; vertical-align: middle; padding: 0 12px; padding-top: 12px; white-space: nowrap; text-decoration: none !important;">Отказаться&nbsp;от&nbsp;рассылки</a>
                                         </td>
                                     </tr>
                                 </table>
